@@ -8,7 +8,7 @@
 - **Score Tracking**: Incremental scoring system with dynamic difficulty.
 
 ## Getting Started:
-Game link:- 
+Game link:- https://aniket-gupta31.github.io/RunManRun/
 
 ## Acknowledgments:
 Special thanks to **Code with Harry** for providing excellent tutorials that guided me through the game development process!
