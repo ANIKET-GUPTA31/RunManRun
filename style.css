@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: transparent;
+    overflow: hidden;
+}
+
+/* Background Image */
+.gameContainer {
+    background-image: url(https://cdn.pixabay.com/video/2021/11/08/95049-645704217_tiny.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Dino Character */
+.dino {
+    background-image: url(https://media3.giphy.com/media/IbUa8hvJrSGhDB9Tli/giphy.gif?cid=6c09b952jkias8lwvthbrdqmg3nt8mt1nr1lugupdydhiu9y&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 229px;
+    height: 257px;
+    position: absolute;
+    bottom: 6vh;
+    left: 217px;
+    transition: left 0.2s ease-in-out;
+    /* Smooth movement */
+}
+
+/* Obstacles */
+.obstacle {
+    width: 174px;
+    height: 132px;
+    background-image: url(https://media0.giphy.com/media/NFEHOylzmQbDcRSlae/giphy.gif?cid=6c09b952k6h4s2z2lfrffhb57fy7ln557g38iv2l0do9xr11&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s);
+    background-size: cover;
+    position: absolute;
+    bottom: 15vh;
+    left: 74vw;
+}
+
+/* Animation for Dino Jump */
+.animateDino {
+    animation: dino 0.6s linear;
+}
+
+/* Dino Jump Animation */
+@keyframes dino {
+    0% {
+        bottom: 19vw;
+    }
+
+    50% {
+        bottom: 450px;
+    }
+
+    100% {
+        bottom: 19vw;
+    }
+}
+
+
+/* Obstacle Animation */
+.obstacleAni {
+    animation: obstacleAni 5s linear infinite;
+}
+
+/* Obstacle Movement from Right to Left */
+@keyframes obstacleAni {
+    0% {
+        left: 100vw;
+    }
+
+    100% {
+        left: -10vw;
+    }
+}
+
+
+/* Game Over Text */
+.gameOver {
+    position: relative;
+    top: 63px;
+    font-size: 53px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    color: #000000;
+    font-weight: 900;
+}
+
+/* Score Display */
+#scoreCont {
+    font-size: 25px;
+    color: #ffffff;
+    font-weight: bold;
+    position: absolute;
+    right: 45px;
+    top: 31px;
+    border: 2px solid rgb(255, 255, 255);
+    padding: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 10px;
+}
+
+/* Power-Up Effect (e.g., Invincibility) */
+.dino.invincible {
+    border: 5px solid yellow;
+    /* Visual indication of invincibility */
+    animation: invincibleEffect 0.5s infinite alternate;
+    /* Flicker effect */
+}
+
+@keyframes invincibleEffect {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
